@@ -1,0 +1,111 @@
+/* Color */
+
+$white-grey : #fafafa;
+$white : #ffffff;
+$blue : #34414a;
+$grey : rgba(70, 87, 99, 0.85);
+$brown : #a65447;
+
+/* Font */
+
+$openSans : 'Open Sans';
+$merriweather : 'Merriweather';
+
+/* Media query */
+$xs : 544px;
+
+
+/* General */
+
+body {
+	background-color: $white-grey ;
+	font-family: $openSans ;
+}
+
+
+a{
+	color:$brown;
+	text-decoration: underline;
+}
+
+a:link{
+	color:$brown;
+	text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4{
+	font-family: $merriweather ;
+	font-weight: bold;
+}
+
+h1{
+	font-size:29px;
+}
+
+h2{
+	font-size:24px;
+}
+
+h3{
+	font-size:18px;
+}
+
+button{
+	border: solid 2px rgba(70, 87, 99, 0.65);
+	height: 40px;
+	text-transform: uppercase;
+}
+
+.flex{
+	display:flex;
+}
+
+.auto{
+	margin:auto;
+}
+
+.row{
+	position:relative;
+}
+
+.marginBottom{
+	margin-bottom:18px;
+}
+
+.paddingBottom{
+	padding-bottom:18px;
+}
+
+.line{
+	width:100%;
+	border-top: 1px solid $white-grey;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+@media screen and (max-width:$xs) {
+
+	h1{
+	font-size:20px;
+	}
+
+	h2{
+		font-size:18px;
+	}
+
+	h3{
+		font-size:16px;
+	}
+
+	button{
+		border: solid 2px rgba(70, 87, 99, 0.65);
+		height: 40px;
+		font-size:12px;
+		text-transform: uppercase;
+	}
+
+
+}

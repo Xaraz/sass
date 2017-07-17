@@ -1,0 +1,166 @@
+
+/* Menu */
+
+ul{
+	&.menu_horizontal{
+		list-style-type : none; 
+		text-transform: uppercase;
+		li {
+			display : inline;
+			padding : 0 20px; 
+			text-align:center;
+			img:first-child {
+		    	height:65px;
+				display : inline;
+				margin-left:-60px;
+			}
+			a{
+				text-decoration:none;
+				color : #333;
+			}
+		}
+		li:nth-child(2) {
+	 		margin-left: 190px;
+		}
+		li span:last-child{
+	 		position: absolute;
+			margin-left: -60px;
+			margin-top: 45px;
+		}
+		.underLogo{
+			font-size: 10px;
+	  		color: $grey;
+	  		margin-top:-20px;
+	  		text-transform: none;
+	  		margin-left: -60px !important;
+		}
+	} 	
+}
+.searchEvent{
+	cursor:pointer;
+	width:80px;
+	height:80px;
+	padding-top:10px;
+}
+.menuEvent{
+	cursor:pointer;
+	width:80px;
+	height:80px;
+	padding-top:10px;
+}
+.activeSearch{
+	background-color:$brown;
+	color:$white;
+}
+.activeMenu{
+	background-color:$blue;
+	color:$white;
+}
+.searchHidden{
+	background-color : $brown ;
+	text-align:center;
+	color : $white ;
+	height: 150px;
+	// display: flex; 
+	position:absolute;
+	z-index:3;
+	display:none;
+	margin-top:-10px;
+	.searchChild{
+		margin:auto;
+		a:link{
+			color : $white ;
+			text-decoration: underline;
+		}
+		a{
+			color : $white ;
+			margin:auto;
+		}
+		input{
+			width: 500px;
+  			height: 50px;
+  			border: solid 2px #d96e5d;
+		}
+		span{
+			color:#34414a;
+		}
+	}
+}
+.menuHidden{
+	background-color : $blue ;
+	color : $white ;
+	height: 200px;
+	position:absolute;
+	z-index:3;
+	display:none;
+	margin-top:-10px;
+	.menuChild{
+		a:link{
+			color : $white-grey ;
+			text-decoration: underline;
+		}
+		li{
+			list-style-type : none;
+		}
+		a{
+			color: $white-grey;
+			list-style-type : none;
+			text-decoration: none;
+		}
+		a:link{
+			color: $white-grey;
+			list-style-type : none;	
+			text-decoration: none;
+		}
+		h3{
+			// text-align:center;
+		}
+		ul{
+			padding:0px;
+		}
+	}
+}
+
+@media screen and (max-width:$xs) {
+	header{
+		background-color: $blue ;
+		color : $white-grey ;
+		position:fixed !important;
+		width: 100%;
+		z-index:3;
+		opacity: 0.95;
+		img{
+			height:65px;
+		}
+		.colMenu{
+			margin-top:10px;
+			cursor:pointer;
+			.menuText{
+				margin-left:-8px;
+			}
+		}
+		ul{
+			list-style:none;
+			li{
+				width:100%;
+				a, 
+				a:link{
+					color: $white-grey ;
+					text-decoration: none;
+				}
+			}
+		}
+		.dropDown{
+			width:80%;
+		}
+		.dropDownIcon{
+			width:20%;
+		}
+		#dropDownAssociation,
+		#dropDownHelp,
+		#showMenu{
+			display:none;
+		}
+	}
+}
+

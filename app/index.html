@@ -17,19 +17,15 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/responsiveMenu.js"></script>
         
-
-
 	</head>
 	
 	<body>
-
 		<div class="container">
-
-			<header>
+			<header class='hidden-xs'>
 				<nav>
-
 					<ul class='menu_horizontal'>  <!-- tous les li de la classe uppercase sont en maj -->
 						<li><a href='#'><img class='logo' src='img/logo.png' alt='logo'></a><span class='underLogo'>Partageons la ville, ses batiments, ses lieux ...</span></li>
 						<li><a href='#'>L'association</a></li>
@@ -41,19 +37,91 @@
 						<li><i class="fa fa-bars fa-2x menuEvent" aria-hidden="true"></i><span>Menu</span></li>
 					</ul>
 				</nav>
-
-				
-
 			</header>
-
-
-
+			<header class='row visible-xs'>
+				<div class='col-xs-9'>
+					<a href='#'><img class='logo' src='img/logo.png' alt='logo'></a>
+				</div>
+				<div class='col-xs-3 colMenu'>
+					<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+					<p class='text-uppercase menuText'>Menu</p>
+				</div>
+				<nav id='showMenu' class="col-xs-12">
+					<ul>
+						<li id='association'>
+							<a class='col-xs-10' href='#'>L'association</a> 
+							<i class="fa fa-chevron-down fa-lg col-xs-2" aria-hidden="true"></i> 
+							<div class="clearfix"></div>
+							<div class='line'></div>
+							<ul id='dropDownAssociation'>	
+								<li>
+									<a href='#'>Devenir membre</a>
+									<div class='line'></div>
+								</li>
+								<li>
+									<a  href='#'>Faire un don</a>
+									<div class='line'></div>
+								</li>
+								<li>
+									<a href='#'>Revue de presse</a>
+									<div class='line'></div>
+								</li>
+								<li>
+									<a href='#'>Nos sources</a>
+									<div class='line'></div>
+								</li>
+								<li>
+									<a href='#'>Nos donateurs</a>
+									<div class='line'></div>
+								</li>
+							</ul>
+						</li>
+						<li id='helpWebSite'>
+							<a class='col-xs-10' href='#'>Contribuer au site</a> 
+							<i class="fa fa-chevron-down fa-lg col-xs-2" aria-hidden="true"></i> 
+							<div class="clearfix"></div>
+							<div class='line'></div>
+							<ul id='dropDownHelp'>	
+								<li>
+									<a href='#'>Créer une nouvelle page</a>
+									<div class='line'></div>
+								</li>
+								<li>
+									<a  href='#'>Modifier la page courante</a>
+									<div class='line'></div>
+								</li>
+								<li>
+									<a href='#'>Modifier le code de la page</a>
+									<div class='line'></div>
+								</li>
+								<li>
+									<a href='#'>Consulter l'historique de la page</a>
+									<div class='line'></div>
+								</li>
+								<li>
+									<a href='#'>Aide à la contribution</a>
+									<div class='line'></div>
+								</li>
+							</ul>			
+						</li>
+						<li><a class='col-xs-12' href='#'>Open Data</a><div class="clearfix"></div></li>
+						<div class='line'></div>
+						<li><a class='col-xs-12' href='#'>Faire un don</a><div class="clearfix"></div></li>
+						<div class='line'></div>
+						<li><a class='col-xs-12' href='#'>English</a><div class="clearfix"></div></li>
+						<div class='line'></div>
+						<li><a class='col-xs-12' href='#'>Deutsch</a><div class="clearfix"></div></li>
+						<div class='line'></div>
+						<li><a class='col-xs-5'  href='#'>Votre profil</a></li>
+						<li><a class='col-xs-7' href='#'>Se déconnecter</a></li>
+						<div class="paddingBottom"></div>
+					</ul>
+				</nav>
+			</header>
 			<div class='row'>
-				
 				<section class="col-md-12 searchHidden">
 					<div class='searchChild'>
-						<h2>Recherchez à travers nos 11 257 adresses et 61 652 photos :</h2>
-						
+						<h2>Recherchez à travers nos 11 257 adresses et 61 652 photos :</h2>	
 						<form method="post" action="#">
 							 <div class="form-group flex">
 				                <div class="input-group auto">
@@ -67,7 +135,6 @@
                			 </form>
 					</div>
 				</section>
-
 				<section class="col-md-12 menuHidden">
 					<div class='menuChild'>
 						<div class="col-md-3">
@@ -102,17 +169,12 @@
 								</ul>
 							</nav>
 						</div>
-
 					</div>
 				</section>
-			
-				<section>
-						
+				<section>	
 						<div class="col-md-6 imgPlace1">
 							<img src='img/01.jpg' alt='lieu1'> <!-- z-index -->
 						</div>
-						
-
 						<div class="col-md-6 place1">
 							<div class="negativeMargin"> <!-- margin negatif + z-index -->
 								<h3>Lumière sur ...</h3>
@@ -123,27 +185,26 @@
 							</div>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo. Nulla euismod, augue consequat rhoncus aliquet, augue nulla scelerisque tortor, vel eleifend sem dolor id leo. Proin ac leo scelerisque, auctor erat et, ullamcorper mi. Etiam eget sodales velit. Curabitur consectetur enim eu massa luctus venenatis et eu metus. Nunc fringilla maximus neque a lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean tristique pharetra posuere. Maecenas quis sodales lacus. Pellentesque mauris metus, interdum at euismod sed, sagittis id odio. Quisque fermentum lobortis ante vel consectetur. Nunc a rutrum leo. </p>
 							<a href="#">Découvrir cette fiche &gt;</a>
+							<div class="paddingBottom"></div>
 						</div>
-
-				</section>
-					
+				</section>		
 				<section class="col-md-12 search">
 					<div class='searchChild'>
 						<h2>Recherchez à travers nos 11 257 adresses et 61 652 photos :</h2>
 						<form method="post" action="#">
 							 <div class="form-group flex">
 				                <div class="input-group auto">
-				                    <input type="text" class="form-control" placeholder="indiquez une adresse, un nom de rue ou un bâtiment"/>
-				                    <span class="input-group-addon">
+				                    <input class='hidden-xs' type="text" class="form-control" placeholder="indiquez une adresse, un nom de rue ou un bâtiment"/>
+				                    <span><input class='visible-xs' type="text" class="form-control" placeholder="indiquez une adresse, un nom"/><i class="fa fa-search fa-lg searchIcon visible-xs"></i></span>
+				                    <span class="input-group-addon hidden-xs">
 				                        <i class="fa fa-search"></i>
 				                    </span>
 				                </div>
-				                <a href="#">recherche avancée</a>
+				                <a class='hidden-xs' href="#">recherche avancée</a>
 	               			 </div>
                			 </form>
 					</div>
-				</section>
-					
+				</section>		
 				<section class='lastChangeAndComments'>
 					<section>
 						<article class="col-md-5 about">
@@ -152,28 +213,27 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo.  Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo.</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo.  Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo.</p>
 							<a href="#">Pour contribuer, inscrivez-vous !</a>
-							<br>
-							<br>
+							<div class="paddingBottom"></div>
 						</article>
-
 						<article class="col-md-7 lastNews">
-							<h2>Dernière actualité de l'association</h2>
-							<h2>Ode à la création, appel à la contribution</h2>
-							
-							<div class='col-md-4'>
+							<h2 class='hidden-xs'>Dernière actualité de l'association</h2>
+							<h2 class='hidden-xs'>Ode à la création, appel à la contribution</h2>
+							<div class='col-md-4 hidden-xs'>
 								<img src='img/02.jpg' alt='lieu2'>
 							</div>
-
+							<div class='col-md-4 visible-xs'>
+								<div class='string'></div>
+								<img src='img/01.jpg' alt='lieu2'>
+							</div>
 							<div class='col-md-8'>
+								<h2 class='visible-xs'>Dernière actualité de l'association</h2>
+								<h2 class='visible-xs'>Ode à la création, appel à la contribution</h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo. Nulla euismod, augue consequat rhoncus aliquet, augue nulla scelerisque tortor, vel eleifend sem dolor id leo. Proin ac leo scelerisque, auctor erat et, ullamcorper mi. Etiam eget sodales velit. Curabitur consectetur enim eu massa luctus venenatis et eu metus. Nunc fringilla maximus neque a lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean tristique pharetra posuere. </p>
 								<a href="#">Lire la suite &gt;</a>
 								<a class='right' href="#">Découvrir les autres actualités &gt;</a>
 							</div>
-							
-							
 						</article>
 					</section>
-
 					<section class="col-md-8 lastChange">
 						<h1>Dernières modifications</h1>
 						<article class="col-md-12">
@@ -181,7 +241,6 @@
 								<div class='string'></div>
 								<img src='img/03.jpg' alt='lieu3'>
 							</div>
-							
 							<div class="col-md-6">
 								<h2>36 rue Aubry-et-Rau</h2>
 								<a href="#">France</a>
@@ -191,56 +250,87 @@
 								<a href="#">Consulter la fiche &gt;</a>
 							</div>
 						</article>
-
 						<article class="col-md-6">
-							<img src='img/03.jpg' alt='lieu3'>
+							<div class='blocImgLastChange'>
+								<div class='string'></div>
+								<img src='img/03.jpg' alt='lieu3'>
+							</div>
+							<div class="col-md-12">
 							<h2>36 rue Aubry-et-Rau</h2>
-							<a href="#">France</a>
-							<span> &gt; </span>
-							<a href="#">Strasbourg</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo. Nulla euismod, augue consequat rhoncus aliquet, augue nulla scelerisque tortor, vel eleifend sem dolor id leo. Proin ac leo scelerisque, auctor erat et, ullamcorper mi. Etiam eget sodales velit.</p>
-							<a href="#">Consulter la fiche &gt;</a>
-							
+								<a href="#">France</a>
+								<span> &gt; </span>
+								<a href="#">Strasbourg</a>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo. Nulla euismod, augue consequat rhoncus aliquet, augue nulla scelerisque tortor, vel eleifend sem dolor id leo. Proin ac leo scelerisque, auctor erat et, ullamcorper mi. Etiam eget sodales velit.</p>
+								<a href="#">Consulter la fiche &gt;</a>
+								<div class='paddingBottom'></div>
+							</div>
 						</article>
-
 						<article class="col-md-6">
-							<img src='img/03.jpg' alt='lieu3'>
-							<h2>36 rue Aubry-et-Rau</h2>
-							<a href="#">France</a>
-							<span> &gt; </span>
-							<a href="#">Strasbourg</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo. Nulla euismod, augue consequat rhoncus aliquet, augue nulla scelerisque tortor, vel eleifend sem dolor id leo. Proin ac leo scelerisque, auctor erat et, ullamcorper mi. Etiam eget sodales velit.</p>
-							<a href="#">Consulter la fiche &gt;</a>
-							
+							<div class='blocImgLastChange'>
+								<div class='string'></div>
+								<img src='img/03.jpg' alt='lieu3'>
+							</div>
+							<div class="col-md-12">
+								<h2>36 rue Aubry-et-Rau</h2>
+								<a href="#">France</a>
+								<span> &gt; </span>
+								<a href="#">Strasbourg</a>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo. Nulla euismod, augue consequat rhoncus aliquet, augue nulla scelerisque tortor, vel eleifend sem dolor id leo. Proin ac leo scelerisque, auctor erat et, ullamcorper mi. Etiam eget sodales velit.</p>
+								<a href="#">Consulter la fiche &gt;</a>	
+								<div class='paddingBottom'></div>
+							</div>	
 						</article>
-						
 						<article class="col-md-6">
-							<img src='img/03.jpg' alt='lieu3'>
-							<h2>36 rue Aubry-et-Rau</h2>
-							<a href="#">France</a>
-							<span> &gt; </span>
-							<a href="#">Strasbourg</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo. Nulla euismod, augue consequat rhoncus aliquet, augue nulla scelerisque tortor, vel eleifend sem dolor id leo. Proin ac leo scelerisque, auctor erat et, ullamcorper mi. Etiam eget sodales velit.</p>
-							<a href="#">Consulter la fiche &gt;</a>
-							
+							<div class='blocImgLastChange'>
+								<div class='string'></div>
+								<img src='img/03.jpg' alt='lieu3'>
+							</div>
+							<div class="col-md-12">
+								<h2>36 rue Aubry-et-Rau</h2>
+								<a href="#">France</a>
+								<span> &gt; </span>
+								<a href="#">Strasbourg</a>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo. Nulla euismod, augue consequat rhoncus aliquet, augue nulla scelerisque tortor, vel eleifend sem dolor id leo. Proin ac leo scelerisque, auctor erat et, ullamcorper mi. Etiam eget sodales velit.</p>
+								<a href="#">Consulter la fiche &gt;</a>
+								<div class='paddingBottom'></div>
+							</div>
 						</article>
-
 						<article class="col-md-6">
-							<img src='img/03.jpg' alt='lieu3'>
-							<h2>36 rue Aubry-et-Rau</h2>
-							<a href="#">France</a>
-							<span> &gt; </span>
-							<a href="#">Strasbourg</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo. Nulla euismod, augue consequat rhoncus aliquet, augue nulla scelerisque tortor, vel eleifend sem dolor id leo. Proin ac leo scelerisque, auctor erat et, ullamcorper mi. Etiam eget sodales velit.</p>
-							<a href="#">Consulter la fiche &gt;</a>
-							
+							<div class='blocImgLastChange'>
+								<div class='string'></div>
+								<img src='img/03.jpg' alt='lieu3'>
+							</div>
+							<div class="col-md-12">
+								<h2>36 rue Aubry-et-Rau</h2>
+								<a href="#">France</a>
+								<span> &gt; </span>
+								<a href="#">Strasbourg</a>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo. Nulla euismod, augue consequat rhoncus aliquet, augue nulla scelerisque tortor, vel eleifend sem dolor id leo. Proin ac leo scelerisque, auctor erat et, ullamcorper mi. Etiam eget sodales velit.</p>
+								<a href="#">Consulter la fiche &gt;</a>
+								<div class='paddingBottom'></div>
+							<div>
 						</article>
-
 					</section>
+
+					<section class="col-md-12 visible-xs">
+						<div class="col-md-8 changeButton">
+							<button type="button">Toutes les dernieres modifications</button>
+						</div>
+					</section>
+
 
 					<section class="col-md-4 lastComments">
 						<h1>Derniers commentaires</h1>
-
+						<article>
+							<h3>36 rue Aubry-et-Rau</h3>
+							<a href="#">France</a>
+							<span> &gt; </span>
+							<a href="#">Strasbourg</a>
+							<p class='imageMessage'><i class="fa fa-envelope-open-o  fa-5x" aria-hidden="true"></i></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo.</p>
+							<a href="#">Consulter la commentaire &gt;</a>	
+							<div class='paddingBottom'></div>
+						</article>
 						<article>
 							<h3>36 rue Aubry-et-Rau</h3>
 							<a href="#">France</a>
@@ -249,10 +339,8 @@
 							<p class='imageMessage'><i class="fa fa-envelope-open-o  fa-5x" aria-hidden="true"></i></p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo.</p>
 							<a href="#">Consulter la commentaire &gt;</a>
-
-							
+							<div class='paddingBottom'></div>
 						</article>
-
 						<article>
 							<h3>36 rue Aubry-et-Rau</h3>
 							<a href="#">France</a>
@@ -261,9 +349,8 @@
 							<p class='imageMessage'><i class="fa fa-envelope-open-o  fa-5x" aria-hidden="true"></i></p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo.</p>
 							<a href="#">Consulter la commentaire &gt;</a>
-							
+							<div class='paddingBottom'></div>
 						</article>
-
 						<article>
 							<h3>36 rue Aubry-et-Rau</h3>
 							<a href="#">France</a>
@@ -271,10 +358,9 @@
 							<a href="#">Strasbourg</a>
 							<p class='imageMessage'><i class="fa fa-envelope-open-o  fa-5x" aria-hidden="true"></i></p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo.</p>
-							<a href="#">Consulter la commentaire &gt;</a>
-							
+							<a href="#">Consulter la commentaire &gt;</a>	
+							<div class='paddingBottom'></div>
 						</article>
-
 						<article>
 							<h3>36 rue Aubry-et-Rau</h3>
 							<a href="#">France</a>
@@ -282,74 +368,50 @@
 							<a href="#">Strasbourg</a>
 							<p class='imageMessage'><i class="fa fa-envelope-open-o  fa-5x" aria-hidden="true"></i></p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo.</p>
-							<a href="#">Consulter la commentaire &gt;</a>
-							
+							<a href="#">Consulter la commentaire &gt;</a>	
+							<div class='paddingBottom'></div>
 						</article>
-
-						<article>
-							<h3>36 rue Aubry-et-Rau</h3>
-							<a href="#">France</a>
-							<span> &gt; </span>
-							<a href="#">Strasbourg</a>
-							<p class='imageMessage'><i class="fa fa-envelope-open-o  fa-5x" aria-hidden="true"></i></p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis nunc augue, id rhoncus nulla volutpat in. Aliquam ante est, tristique non urna placerat, venenatis imperdiet justo.</p>
-							<a href="#">Consulter la commentaire &gt;</a>
-							
-						</article>
-
-						<!-- <button type="button" class="btn btn-primary">Tous les derniers commentaires</button> -->
 					</section>
 				</section>
-				
 				<section class="col-md-12">
-					<div class="col-md-8 changeButton">
+					<div class="col-md-8 changeButton hidden-xs">
+						<div class='paddingBottom visible-xs'></div>
 						<button type="button">Toutes les dernieres modifications</button>
 					</div>
 					<div class="col-md-4 changeButton">
+						<div class='paddingBottom visible-xs'></div>
 						<button type="button">Tous les derniers commentaires</button>
 					</div>
 				</section>
 			</div><!-- row -->
-
-			<br>
-
-				
-
+			<div class='marginBottom'></div>
 			<footer class="row">
-
 				<div class="col-md-3">
 					<nav>
 						<ul> 
 							<li><img class='logo' src='img/logo.png' alt='logo'></li>
 							<li><a href="#">Nous contacter</a></li>
+							<div class='marginBottom'></div>
 							<li><a href="#">Foire aux questions</a></li>
+							<div class='marginBottom'></div>
 							<li><a href="#">Mentions légales</a></li>
 						</ul>
 					</nav>
 				</div>
-
 				<div class="col-md-6 text-center">
-					<br>
+					<div class='marginBottom'></div>
 					<p>Archi-wiki est un projet financé et soutenu par :</p>
-					<br>
-					<br>
+					<div class='marginBottom'></div>
 					<p>Prévoir logo des partenaires, en défausse</p>
 				</div>
-
-				<div class="col-md-3">
-					<br>
+				<div class="col-md-3 text-center">
 					<button type="button"><i class="fa fa-twitter  fa-lg" aria-hidden="true"></i>  @archi-strasbourg</button>
-					<br>
-					<br>
+					<div class='marginBottom'></div>
 					<button type="button"><i class="fa fa-facebook  fa-lg" aria-hidden="true"></i>  Archi.Strasbourg</button>
-					<br>
-					<br>
+					<div class='marginBottom'></div>
 					<button type="button"><i class="fa fa-instagram  fa-lg" aria-hidden="true"></i>  archi_strasbourg</button>
 				</div>
-
 			</footer>
 		</div>
-	</body>
-	
-	
+	</body>	
 </html>

@@ -1,0 +1,35 @@
+/* Footer */
+
+footer{
+	background-color: $blue ;
+	color : $white-grey ;
+	padding-bottom:30px;
+	padding-top:30px;
+	li{
+		list-style-type : none;
+		text-align:center; 
+	}
+	.logo{
+		height:65px;
+	}
+	a{
+		color:$white;
+		list-style-type : none;
+		text-decoration: none;
+	}
+	a:link{
+		color:$white;
+		list-style-type : none;	
+		text-decoration: none;
+	}
+	p:first-of-type{
+		font-weight: bold;
+	}
+	button{
+		background-color: $blue ;
+		color : $white-grey ;
+		border: solid 2px #fafafa;
+		width:200px;
+	}
+}
+
