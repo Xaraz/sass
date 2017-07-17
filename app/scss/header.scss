@@ -77,15 +77,22 @@ ul{
 			margin:auto;
 		}
 		input{
-			width: 500px;
+			width: 100%;
   			height: 50px;
   			border: solid 2px #d96e5d;
+  			color: black ;
+  			padding-left:10px;
 		}
 		span{
 			color:#34414a;
 		}
 	}
 }
+
+.logo{
+	height:65px;
+}
+
 .menuHidden{
 	background-color : $blue ;
 	color : $white ;

@@ -1,0 +1,23 @@
+J'ai corrigés les erreurs que vous avez énoncé lors de mon travail, les br, les fichiers css, l'indentation, ajouter plus de classes ...
+Cependant un des points que vous m'avez demandé, je ne sais pas quoi en penser.
+Vous avez dit que je ne respecte pas la hiérachie de l'information avec les H1-H2-HN.
+Pour rester dans cette logique, il faudrait que mes HN dans derniers commentaire soit les meme HN que dans derniere modification.
+Le probleme etant que sur la maquette, on voit bien que ce n'est pas le meme HN dans les deux, alors qu'un point de vue hiérarchisation, ça devrait etre le meme.
+Je ne sais pas quoi en penser. Respecter la maquette ou bien respecter la logique ?
+Je pourrais concillier les 2, mettre le bon HN, et faire une classe css pour réduire sa size pour correspondre à la maquette. Mais est ce vraiment une bonne pratique ?
+
+Lors de ce TP j'ai eu un 2em probleme.
+Comment mettre une image en width 100% de l'ecran, alors qu'elle se trouve dans un col bootstrap qui met de base un padding ?
+Si j'enleve le padding uniquement en responsive, cela va quand meme affecter toute l'harmonie des autres elements le composant.
+Le Before pourrait marcher, mais si j'ai une Col, dans une col, qui contient une image, le before ne marchera pas.
+
+Je tiens à preciser aussi que je tiens à utiliser bootstrap, car dans mon travail, on m'oblige à absolument tout faire avec bootstrap, car ils considerent le developpement
+front end comme une perte de temps. Ce n'est pas mon avis, mais je dois me plier à leur exigeance et du coup tout le temps utiliser bootstrap. De ce fait, 
+mieux j'arriverais à l'utiliser et contourner ses problemes, plus je serais productif à mon travail.
+
+Est ce qu'il fallait aussi faire les autres points de ruptures ? Je n'ai pas trouvé la réponse dans les consignes, j'ai uniquement fait la version PC et la version mobile
+
+J'ai aussi eu un probleme avec les petites coches sur les images en responsive. J'ai tout mis en display none, car en fonction de la taille du mobile ça ne marchait pas.
+Comment remédier à cela ?
+
+Comment faire le débordement sur la div Lumiere Sur , sans casser la version PC ?

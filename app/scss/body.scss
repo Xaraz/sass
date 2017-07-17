@@ -49,7 +49,7 @@
   			padding-left:10px;
 		}
 		span{
-			color:#34414a;
+			color:$blue;
 		}
 	}	
 }
@@ -78,10 +78,11 @@
 			width: 30px;
 		  	height: 30px;
 		  	transform: rotate(-45deg);
-		  	background-color: #ffffff;
+		  	background-color: $white;
 		  	position:absolute;
 		  	left: 10%;
 			top: 48%;
+			display:none;
 		}
 	}
 	article:first-of-type{
@@ -137,8 +138,9 @@
 		width: 30px;
 	  	height: 30px;
 	  	transform: rotate(-45deg);
-	  	background-color: #ffffff;
+	  	background-color: $white;
 	  	position:absolute;
+	  	display:none;
 	}
 	.string{
 		@extend .stringParent ;

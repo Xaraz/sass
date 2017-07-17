@@ -57,7 +57,7 @@ button {
   margin-top: 10px;
   margin-bottom: 10px; }
 
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 20px; }
   h2 {
@@ -136,11 +136,16 @@ ul.menu_horizontal {
       color: #ffffff;
       margin: auto; }
     .searchHidden .searchChild input {
-      width: 500px;
+      width: 100%;
       height: 50px;
-      border: solid 2px #d96e5d; }
+      border: solid 2px #d96e5d;
+      color: black;
+      padding-left: 10px; }
     .searchHidden .searchChild span {
       color: #34414a; }
+
+.logo {
+  height: 65px; }
 
 .menuHidden {
   background-color: #34414a;
@@ -166,7 +171,7 @@ ul.menu_horizontal {
   .menuHidden .menuChild ul {
     padding: 0px; }
 
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 768px) {
   header {
     background-color: #34414a;
     color: #fafafa;
@@ -212,7 +217,7 @@ ul.menu_horizontal {
   .negativeMargin h3 {
     margin: 0px; }
 
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 768px) {
   .negativeMargin {
     margin-left: 0px; } }
 
@@ -268,7 +273,8 @@ ul.menu_horizontal {
     background-color: #ffffff;
     position: absolute;
     left: 10%;
-    top: 48%; }
+    top: 48%;
+    display: none; }
 
 .lastChange article:first-of-type {
   display: flex; }
@@ -305,13 +311,14 @@ ul.menu_horizontal {
 .about {
   background-color: #ebebeb; }
 
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 768px) {
   .stringParent, .string {
     width: 30px;
     height: 30px;
     transform: rotate(-45deg);
     background-color: #ffffff;
-    position: absolute; }
+    position: absolute;
+    display: none; }
   .string {
     left: 15%;
     top: 93%; }
@@ -383,7 +390,14 @@ Comment mettre une image en width 100% de l'ecran, alors qu'elle se trouve dans 
 Si j'enleve le padding uniquement en responsive, cela va quand meme affecter toute l'harmonie des autres elements le composant.
 Le Before pourrait marcher, mais si j'ai une Col, dans une col, qui contient une image, le before ne marchera pas.
 
-Je tiens à preciser aussi que je tiens à utiliser bootstrap, car dans mon travail, on m'oblige à obsolument tout faire avec bootstrap, car ils considerent le developpement
+Je tiens à preciser aussi que je tiens à utiliser bootstrap, car dans mon travail, on m'oblige à absolument tout faire avec bootstrap, car ils considerent le developpement
 front end comme une perte de temps. Ce n'est pas mon avis, mais je dois me plier à leur exigeance et du coup tout le temps utiliser bootstrap. De ce fait, 
 mieux j'arriverais à l'utiliser et contourner ses problemes, plus je serais productif à mon travail.
+
+Est ce qu'il fallait aussi faire les autres points de ruptures ? Je n'ai pas trouvé la réponse dans les consignes, j'ai uniquement fait la version PC et la version mobile
+
+J'ai aussi eu un probleme avec les petites coches sur les images en responsive. J'ai tout mis en display none, car en fonction de la taille du mobile ça ne marchait pas.
+Comment remédier à cela ?
+
+Comment faire le débordement sur la div Lumiere Sur , sans casser la version PC ?
  */

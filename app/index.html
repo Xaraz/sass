@@ -38,7 +38,7 @@
 					</ul>
 				</nav>
 			</header>
-			<header class='row visible-xs'>
+			<header style='display:none;' class='row visible-xs'>
 				<div class='col-xs-9'>
 					<a href='#'><img class='logo' src='img/logo.png' alt='logo'></a>
 				</div>
@@ -121,20 +121,21 @@
 			<div class='row'>
 				<section class="col-md-12 searchHidden">
 					<div class='searchChild'>
-						<h2>Recherchez à travers nos 11 257 adresses et 61 652 photos :</h2>	
+						<h2>Recherchez à travers nos 11 257 adresses et 61 652 photos :</h2>
 						<form method="post" action="#">
 							 <div class="form-group flex">
 				                <div class="input-group auto">
-				                    <input type="text" class="form-control" placeholder="indiquez une adresse, un nom de rue ou un bâtiment"/>
-				                    <span class="input-group-addon">
+				                    <input class='hidden-xs' type="text" class="form-control" placeholder="indiquez une adresse, un nom de rue ou un bâtiment"/>
+				                    <span><input class='visible-xs' type="text" class="form-control" placeholder="indiquez une adresse, un nom"/><i class="fa fa-search fa-lg searchIcon visible-xs"></i></span>
+				                    <span class="input-group-addon hidden-xs">
 				                        <i class="fa fa-search"></i>
 				                    </span>
 				                </div>
-				                <a href="#">recherche avancée</a>
+				                <a class='hidden-xs' href="#">recherche avancée</a>
 	               			 </div>
                			 </form>
 					</div>
-				</section>
+				</section>	
 				<section class="col-md-12 menuHidden">
 					<div class='menuChild'>
 						<div class="col-md-3">
